@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2a2a2a;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#button-container {
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn.blue {
+    background-color: #2e9fea;
+}
+
+.btn.green {
+    background-color: #4caf50;
+}
+
+.btn.orange {
+    background-color: #ff9800;
+}
+
+.btn.red {
+    background-color: #f44336;
+}
+
+#toast-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    position: relative;
+    opacity: 1;
+    transform: translateY(-100%);
+    animation: slideIn 0.5s ease forwards;
+}
+
+.toast .icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.toast .content {
+    flex-grow: 1;
+}
+
+.toast .title {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.toast .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.toast.help {
+    background-color: #2e9fea;
+    border-left: 4px solid #006bb3;
+}
+
+.toast.success {
+    background-color: #4caf50;
+    border-left: 4px solid #2e7d32;
+}
+
+.toast.warning {
+    background-color: #ff9800;
+    border-left: 4px solid #e65100;
+}
+
+.toast.error {
+    background-color: #f44336;
+    border-left: 4px solid #b71c1c;
+}
+
+.toast.help .icon {
+    color: #006bb3;
+}
+
+.toast.success .icon {
+    color: #2e7d32;
+}
+
+.toast.warning .icon {
+    color: #e65100;
+}
+
+.toast.error .icon {
+    color: #b71c1c;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
