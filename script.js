@@ -57,10 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getMessage(type) {
         switch(type) {
-            case 'help': return 'Do you have a problem? Just use this contact form.';
-            case 'success': return 'Your message has been sent successfully.';
-            case 'warning': return 'Be cautious! Something might go wrong.';
-            case 'error': return 'An error occurred. Please try again.';
+            case 'help': return 'Ada yang bisa saya bantu?';
+            case 'success': return 'Pesan mu Berhasil';
+            case 'warning': return 'sepertinya ada yang salah deh';
+            case 'error': return 'ini eror, tolong ulangi lagi';
         }
     }
 });
